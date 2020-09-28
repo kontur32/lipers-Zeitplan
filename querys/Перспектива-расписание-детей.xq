@@ -1,4 +1,4 @@
-(: Расписание обучающихся :)
+(: Расписание обучающихся (c) С.С. Мишуров :)
 
 import module namespace lipersRasp = 'http://lipers.ru/modules/расписание' 
   at '../modules/lipers-module-lipersRasp.xqm';
