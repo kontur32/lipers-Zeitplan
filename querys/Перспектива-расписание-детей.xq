@@ -1,3 +1,5 @@
+(: Расписание обучающихся :)
+
 import module namespace lipersRasp = 'http://lipers.ru/modules/расписание' 
   at '../modules/lipers-module-lipersRasp.xqm';
 
