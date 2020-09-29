@@ -106,13 +106,13 @@ declare function lipersRasp:рендерингРасписаниеДетское
 declare 
   %private
 function lipersRasp:строкиРасписаниеУчителей( $расписаниеДанные ){
-  for $учитель in $расписаниеДанные/row[ position() >= 2 ]
+  for $учитель in $расписаниеДанные/row[ position() >= 3 ]
   where $учитель/cell[ @label = "Учитель" ]/text()
   order by $учитель/text()
 
   return 
     <tr>
-      <td> <b> { $учитель/cell [ 1 ] } </b> </td>
+      <td><b>{ $учитель/cell[ 1 ] }</b></td>
         {
           for $i in $учитель/cell [ position() >= 3 ]
           return
