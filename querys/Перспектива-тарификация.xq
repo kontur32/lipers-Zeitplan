@@ -1,5 +1,5 @@
 import module namespace lipersRasp = 'http://lipers.ru/modules/расписание' 
-  at '../modules/lipers-module-lipersRasp.xqm';
+  at 'https://raw.githubusercontent.com/kontur32/lipers-Zeitplan/dev/modules/lipers-module-lipersRasp.xqm';
 
 let $data := .
 
