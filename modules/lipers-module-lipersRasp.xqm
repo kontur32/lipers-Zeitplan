@@ -107,7 +107,7 @@ declare
   %private
 function lipersRasp:строкиРасписаниеУчителей( $расписаниеДанные ){
   for $учитель in $расписаниеДанные/row[ position() >= 3 ]
-  where distinct-values( $учитель/cell[ @label = "Учитель" ] )
+  where  $учитель/cell[ @label = "Учитель" ]
   order by $учитель
 
   return 
