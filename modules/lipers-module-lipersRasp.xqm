@@ -107,7 +107,7 @@ declare
   %private
 function lipersRasp:строкиРасписаниеУчителей( $расписаниеДанные ){
   for $учитель in $расписаниеДанные/row[ position() >= 3 ]
-  where  $учитель/cell[ @label = "Учитель" ]
+  where  $учитель/cell[ @label = "Учитель" ]/text()
   order by $учитель
 
   return 
