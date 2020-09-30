@@ -19,7 +19,7 @@ declare function lipersRasp:предмет( $код as xs:string*, $кодифи
 declare function lipersRasp:списокКлассов( $расписаниеДанные ){
   let $классы := 
     $расписаниеДанные
-    /row[ position() >= 4 ]
+    /row[ position() >= 3 ]
     /cell[ position() >= 3 ]/tokenize( tokenize( ., ';')[ 1 ], ',' )
   for $i in distinct-values( $классы )
   order by number( $i )
@@ -33,7 +33,7 @@ declare function lipersRasp:строкиДетскогоРасписания( $�
   return
   let $урокиКласса :=
     $расписаниеДанные
-    /row[ position() >= 4 ]
+    /row[ position() >= 3 ]
     /cell[ position() >= 3 ][ tokenize( tokenize( ., ';' )[ 1 ], ',' ) = $класс ]
   for $урок in 1 to 9
   return
