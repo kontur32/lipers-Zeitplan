@@ -178,7 +178,8 @@ function
   lipersRasp:рендерингРасписаниеДетское2(
     $расписаниеДанные,
     $словарьПредметов,
-    $params
+    $params,
+    $ID
   )
 {
   <div>
@@ -187,7 +188,7 @@ function
     <div>Выберите класс: {
       for $i in lipersRasp:спиоскКлассов( $расписаниеДанные )
       return
-        <a href = '{ "класс=" || $i }'>{ $i }</a>
+        <a href = '{ $ID|| "класс=" || $i }'>{ $i }</a>
     }</div>
     <table border = '1px'>
       <tr>
