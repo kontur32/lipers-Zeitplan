@@ -4,7 +4,9 @@ import module namespace model = 'http://lipers.ru/modules/модельДанны
   at 'https://raw.githubusercontent.com/kontur32/lipers-Zeitplan/dev/modules/dataModel.xqm';
   
 import module namespace lipersRasp = 'http://lipers.ru/modules/расписание' 
-  at 'https://raw.githubusercontent.com/kontur32/lipers-Zeitplan/dev/modules/lipers-module-lipersRasp.xqm';
+  at '../modules/lipers-module-lipersRasp.xqm';
+
+declare variable $params external;
 
 let $data := .
 
@@ -21,4 +23,4 @@ let $расписаниеДанные :=
    )
       
 return
- lipersRasp:рендерингРасписаниеДетское2( $расписаниеДанные, $словарьПредметов )
+ lipersRasp:рендерингРасписаниеДетское2( $расписаниеДанные, $словарьПредметов, $params )
