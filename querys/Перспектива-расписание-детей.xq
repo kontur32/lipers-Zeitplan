@@ -1,7 +1,7 @@
 (: Расписание обучающихся (c) С.С. Мишуров :)
 
 import module namespace model = 'http://lipers.ru/modules/модельДанных' 
-  at '../modules/dataModel.xqm';
+  at 'https://raw.githubusercontent.com/kontur32/lipers-Zeitplan/dev/modules/dataModel.xqm';
   
 import module namespace lipersRasp = 'http://lipers.ru/modules/расписание' 
   at 'https://raw.githubusercontent.com/kontur32/lipers-Zeitplan/dev/modules/lipers-module-lipersRasp.xqm';
