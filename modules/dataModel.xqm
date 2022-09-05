@@ -69,19 +69,3 @@ declare function model:расписание( $table as element( table ), $params
     $table/row[ cell[ @label = 'ID учителя' ]/text() ]/model:учитель( ., $params )
   }
 };
-
-(:
-  трансформирует расписание из формата element(с:расписание) в RDF/XML
-:)
-declare 
-  %public
-function model:расписаниеRDF(
-  $расписание as element(с:расписание),
-  $календарныйГод  as xs:integer,
-  $номерКалендарнойНедели as xs:integer,
-  $учебныйГод as xs:string, 
-  $номерУчебнойНедели as xs:integer
-)
-{
-  
-};
