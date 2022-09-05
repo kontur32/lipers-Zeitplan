@@ -70,12 +70,9 @@ declare function model:расписание( $table as element( table ), $params
   }
 };
 
-(:
-  трансформирует расписание из формата element(с:расписание) в RDF/XML
-:)
 declare 
   %public
-function model:расписаниеRDF(
+function local:расписаниеRDF(
   $расписание as element(с:расписание),
   $календарныйГод  as xs:integer,
   $номерКалендарнойНедели as xs:integer,
@@ -84,11 +81,6 @@ function model:расписаниеRDF(
 )
 {
   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:признак = "http://lipers.ru/схема/признаки/">{
-    for $i in $расписание/с:учитель
-    let $идентификаторУчителя := 
-      'http://lipers.ru/схема/сущности/учителя/#' || $i/@id/data()
-    return
-      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:признак = "http://lipers.ru/схема/признаки/">{
     for $i in $расписание/с:учитель
     let $идентификаторУчителя := 
       'http://lipers.ru/схема/сущности/учителя/#' || $i/@id/data()
