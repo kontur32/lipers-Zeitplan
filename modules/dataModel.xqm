@@ -75,7 +75,7 @@ declare function model:расписание( $table as element( table ), $params
 :)
 declare 
   %public
-function local:расписаниеRDF(
+function model:расписаниеRDF(
   $расписание as element(с:расписание),
   $календарныйГод  as xs:integer,
   $номерКалендарнойНедели as xs:integer,
